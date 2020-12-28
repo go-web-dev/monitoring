@@ -1,0 +1,24 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 3h
+  receiver: 'email'
+receivers:
+  - name: 'email'
+    email_configs:
+      - to: 'steevehook@gmail.com'
+        from: 'steevehook@gmail.com'
+        smarthost: smtp.gmail.com:587
+        auth_username: 'steevehook@gmail.com'
+        auth_identity: 'steevehook@gmail.com'
+        auth_password: 'qyvkmvzyusmolult'
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']
