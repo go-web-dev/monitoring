@@ -6,11 +6,11 @@ services:
     restart: always
     volumes:
       - prometheus_data:/prometheus
-      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./config/:/etc/prometheus
     ports:
       - "9090:9090"
 
-  alert-manager:
+  alertmanager:
     image: prom/alertmanager
     restart: always
     ports:

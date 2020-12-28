@@ -33,8 +33,8 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 9,
-        "w": 12,
+        "h": 14,
+        "w": 19,
         "x": 0,
         "y": 0
       },
@@ -128,5 +128,5 @@
   "timezone": "",
   "title": "Test Dashboard",
   "uid": "zOcEEybGk",
-  "version": 2
+  "version": 3
 }
